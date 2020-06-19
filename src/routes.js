@@ -18,10 +18,7 @@ export default function Routes() {
       <Stack.Navigator headerMode={'none'}>
         <Stack.Screen name="MenuPrincipal" component={MenuPrincipal} />
         <Stack.Screen name="ListaDePersonagens" component={Listar} />
-        <Stack.Screen
-          name="CadastroDePersonagem"
-          component={CadastrarPersonagem}
-        />
+        <Stack.Screen name="CadastroDePersonagem" component={CadastrarPersonagem}/>
         <Stack.Screen name="FichaPersonagem" component={FichaPersonagem} />
       </Stack.Navigator>
     </NavigationContainer>

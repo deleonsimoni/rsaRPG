@@ -62,9 +62,20 @@ export default function EditarFichaPersonagem() {
     },
 
     itemDashboard: {
-      borderWidth:1,
       width:'33%',
       height: '100%'
+    },
+
+    titleItemDashboard: {
+      alignItems:"center",
+      alignContent:"center",
+      textAlign:"center",
+    },
+
+    valueItemDashboard: {
+      alignItems:"center",
+      alignContent:"center",
+      textAlign:"center",
     },
 
     textButton: {
@@ -87,35 +98,28 @@ export default function EditarFichaPersonagem() {
                     style={styles.containerImage}
                     resizeMode="cover">
 
-          <Text style={styles.welcome}>Nome do Heroi</Text>
+          <Text style={styles.welcome}>Garoto Juca</Text>
 
           <View style={{paddingLeft: 4}}>
-
 
             <View style={[styles.dashboard, {flexDirection:"row"}]}>
 
               <View style={styles.itemDashboard}>
-
-                 <Text>Nome do Heroi</Text>
-
+                 <Text style={styles.titleItemDashboard}>Defesa</Text>
+                 <Text style={styles.valueItemDashboard}>8/10</Text>
               </View>
 
               <View style={styles.itemDashboard}>
-
-                <Text>Nome do Heroi</Text>
-
+                <Text style={styles.titleItemDashboard}>Saúde</Text>
+                <Text style={styles.valueItemDashboard}>10/10</Text>
               </View>
 
               <View style={styles.itemDashboard}>
-                <Text>Nome do Heroi</Text>
-
-
+                <Text style={styles.titleItemDashboard}>Overview</Text>
+                <Text style={styles.valueItemDashboard}>Bem</Text>
               </View>
-
 
             </View>
-
-
 
 
             <Text>Forca</Text>

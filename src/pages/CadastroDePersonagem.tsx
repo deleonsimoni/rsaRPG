@@ -1,30 +1,39 @@
 import React, {useState} from 'react';
 import {
-  View,
+  SafeAreaView,
   Text,
   TextInput,
   TouchableOpacity,
   StyleSheet,
+  Picker,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 export default function AdicionarPersonagem() {
   const [nome, setNome] = useState('garoto juca');
-  const [forca, setForca] = useState('');
+  const [Sistema, setSistema] = useState('CDZ');
   const navigation = useNavigation();
 
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text  />
+    <SafeAreaView
+      style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>Nome</Text>
+
       <TextInput
         style={{height: 40, width: 100, borderColor: 'gray', borderWidth: 1}}
         value={nome}
+        onChangeText={(text) => setNome({text})}
       />
 
-      <TextInput
-        style={{height: 40, width: 100, borderColor: 'white', borderWidth: 1}}
-        value={forca}
-      />
+      <Text>Tema</Text>
+      <Picker
+        selectedValue={Sistema}
+        style={{height: 50, width: 250}}
+        onValueChange={(itemValue, itemIndex) => setSistema(itemValue)}>
+        <Picker.Item label="Cavaleiros do Zodiaco" value="CDZ" />
+        <Picker.Item label="Boku no Hero" value="BNH" />
+        <Picker.Item label="Black Clover" value="BNH" />
+      </Picker>
 
       <TouchableOpacity
         style={styles.buttonStyle}
@@ -37,7 +46,7 @@ export default function AdicionarPersonagem() {
         onPress={() => navigation.goBack()}>
         <Text>Voltar</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 }
 const styles = StyleSheet.create({

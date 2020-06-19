@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   Text,
@@ -11,9 +11,10 @@ import {
 } from 'react-native';
 
 import {useNavigation} from '@react-navigation/native';
-import tabMenu from './TabMenu';
 
-export default function Ficha() {
+export default function EditarFichaPersonagem() {
+  const [nome, setNome] = useState('garoto juca');
+  const [Sistema, setSistema] = useState('CDZ');
   const navigation = useNavigation();
 
   const styles = StyleSheet.create({
